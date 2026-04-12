@@ -1,0 +1,28 @@
+{
+  "title": "MVerb",
+  "children": [
+    {
+      "title": "Overview",
+      "lines": [
+        "Algorithmic reverb",
+        "based on Martin",
+        "Eastwood's MVerb.",
+        "",
+        "Wide ambience with",
+        "controllable early",
+        "and late energy."
+      ]
+    },
+    {
+      "title": "Controls",
+      "lines": [
+        "Knobs 1-4: Damp,",
+        "Density, Bandwidth,",
+        "Decay",
+        "",
+        "Knobs 5-8: PreDly,",
+        "Size, Gain, Mix"
+      ]
+    }
+  ]
+}

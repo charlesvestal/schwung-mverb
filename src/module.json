@@ -1,0 +1,15 @@
+{
+  "id": "mverb",
+  "name": "MVerb",
+  "abbrev": "MVB",
+  "version": "0.1.0",
+  "description": "Algorithmic reverb based on Martin Eastwood's MVerb",
+  "author": "Andre Louis (DSP: Martin Eastwood)",
+  "license": "GPL-3.0",
+  "dsp": "mverb.so",
+  "api_version": 2,
+  "capabilities": {
+    "chainable": true,
+    "component_type": "audio_fx"
+  }
+}
