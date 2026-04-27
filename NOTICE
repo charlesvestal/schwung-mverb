@@ -1,0 +1,12 @@
+schwung-mverb
+=============
+
+This module includes Martin Eastwood's **MVerb** algorithmic reverb code
+(https://github.com/martineastwood/mverb) and is distributed under the
+terms of the GNU General Public License, version 3 or later
+(GPL-3.0-or-later). The full text of the GPL-3 is in the LICENSE file.
+
+Schwung integration by Andre Louis.
+
+See bundled source notices in `src/dsp/MVerb.h` for upstream copyright
+and authorship details.

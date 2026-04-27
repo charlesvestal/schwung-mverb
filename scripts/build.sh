@@ -36,6 +36,8 @@ ${CROSS_PREFIX}g++ -O3 -shared -fPIC \
 
 cp src/module.json dist/mverb/module.json
 [ -f src/help.json ] && cp src/help.json dist/mverb/help.json
+[ -f LICENSE ] && cp LICENSE dist/mverb/LICENSE
+[ -f NOTICE ]  && cp NOTICE  dist/mverb/NOTICE
 cp build/mverb.so dist/mverb/mverb.so
 chmod +x dist/mverb/mverb.so
 
