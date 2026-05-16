@@ -29,6 +29,17 @@ static float clampf(float v, float lo, float hi) {
     return v;
 }
 
+/* Soft-clip for output stage. Identity for |x| <= 0.7, smooth tanh knee above,
+   asymptotes to ±1.0. Prevents harsh hard-clip artifacts when MVerb's
+   accumulator (sum of 7 tank taps) overshoots unity. */
+static inline float soft_clip(float x) {
+    const float t = 0.7f;
+    const float k = 1.0f - t;  /* 0.3 */
+    if (x >  t) return  t + k * tanhf((x - t) / k);
+    if (x < -t) return -t + k * tanhf((x + t) / k);
+    return x;
+}
+
 static void log_msg(const char *msg) {
     if (g_host && g_host->log) {
         char buf[256];
@@ -205,8 +216,8 @@ static void process_block(void *instance, int16_t *audio_inout, int frames) {
     inst->reverb.process(inputs, outputs, frames);
 
     for (i = 0; i < frames; ++i) {
-        float l = clampf(out_l[i], -1.0f, 1.0f);
-        float r = clampf(out_r[i], -1.0f, 1.0f);
+        float l = soft_clip(out_l[i]);
+        float r = soft_clip(out_r[i]);
         audio_inout[i * 2] = (int16_t)(l * 32767.0f);
         audio_inout[i * 2 + 1] = (int16_t)(r * 32767.0f);
     }
