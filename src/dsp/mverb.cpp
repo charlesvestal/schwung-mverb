@@ -176,15 +176,15 @@ static int get_param(void *instance, const char *key, char *buf, int buf_len) {
     if (strcmp(key, "chain_params") == 0) {
         const char *json =
             "["
-            "{\"key\":\"damping\",\"name\":\"Damping\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
-            "{\"key\":\"density\",\"name\":\"Density\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
+            "{\"key\":\"damping\",\"short_name\":\"DAMP\",\"name\":\"Damping\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
+            "{\"key\":\"density\",\"short_name\":\"DENS\",\"name\":\"Density\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
             "{\"key\":\"bandwidth\",\"name\":\"Bandwidth\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.75,\"step\":0.01},"
             "{\"key\":\"decay\",\"name\":\"Decay\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
-            "{\"key\":\"predelay\",\"name\":\"Predelay\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0,\"step\":0.01},"
+            "{\"key\":\"predelay\",\"short_name\":\"PREDEL\",\"name\":\"Predelay\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0,\"step\":0.01},"
             "{\"key\":\"size\",\"name\":\"Size\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.5,\"step\":0.01},"
             "{\"key\":\"gain\",\"name\":\"Gain\",\"type\":\"float\",\"min\":0,\"max\":1.5,\"default\":1,\"step\":0.01},"
             "{\"key\":\"mix\",\"name\":\"Mix\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.35,\"step\":0.01},"
-            "{\"key\":\"early_mix\",\"name\":\"Early Mix\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.75,\"step\":0.01}"
+            "{\"key\":\"early_mix\",\"short_name\":\"Early\",\"name\":\"Early Mix\",\"type\":\"float\",\"min\":0,\"max\":1,\"default\":0.75,\"step\":0.01}"
             "]";
         int len = (int)strlen(json);
         if (len >= buf_len) return -1;
