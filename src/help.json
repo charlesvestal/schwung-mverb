@@ -21,7 +21,21 @@
         "Decay",
         "",
         "Knobs 5-8: PreDly,",
-        "Size, Gain, Mix"
+        "Size, Gain, Mix",
+        "",
+        "Early Mix is a ninth",
+        "param with no knob -",
+        "it sits on the next",
+        "page. 0..1, default",
+        "0.75. It crossfades",
+        "early reflections",
+        "against the late",
+        "tail: 1 is all tail,",
+        "0 is reflections",
+        "only.",
+        "",
+        "All params are 0..1",
+        "except Gain, 0..1.5."
       ]
     }
   ]
